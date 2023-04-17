@@ -2,7 +2,7 @@
 from zmqRemoteApi import RemoteAPIClient
 import keyboard
 
-client = RemoteAPIClient('localhost', 23000)
+client = RemoteAPIClient('192.168.254.72', 23000)
 
 print('Program started')
 sim = client.getObject('sim')
