@@ -822,11 +822,14 @@ Plotly.newPlot('plot', data, layout)
 </ul>
 <p>2.How do you establish a connection between a Python script and CoppeliaSim using zmqRemoteAPI?</p>
 <p>下載<a href="/downloads/zmqRemoteApi.7z">/downloads/zmqRemoteApi.7z</a>解壓縮</p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># pip install pyzmq cbor keyboard #這是安裝所需的Python庫，包括zmqRemoteAPI、pyzmq、cbor和keyboard。
-from zmqRemoteApi import RemoteAPIClient #這是從zmqRemoteAPI庫中導入RemoteAPIClient類，用於與CoppeliaSim建立連接。
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># pip install pyzmq cbor keyboard
+ #這是安裝所需的Python庫，包括zmqRemoteAPI、pyzmq、cbor和keyboard。
+from zmqRemoteApi import RemoteAPIClient 
+#這是從zmqRemoteAPI庫中導入RemoteAPIClient類，用於與CoppeliaSim建立連接。
 import keyboard
 
-client = RemoteAPIClient('192.168.254.72', 23000) #這是從zmqRemoteAPI庫中導入RemoteAPIClient類，用於與CoppeliaSim建立連接。</pre>
+client = RemoteAPIClient('192.168.254.72', 23000) 
+#這是從zmqRemoteAPI庫中導入RemoteAPIClient類，用於與CoppeliaSim建立連接。</pre>
 <p></p>
 <p>3.What are some common use cases for zmqRemoteAPI in CoppeliaSim?</p>
 <p>使用 zmqRemoteAPI，可以實現許多在 CoppeliaSim 中的常見用例，例如：</p>
@@ -847,11 +850,9 @@ client = RemoteAPIClient('192.168.254.72', 23000) #這是從zmqRemoteAPI庫中�
 <ul>
 <li>What are the advantages and disadvantages of using zmqRemoteAPI compared to other methods of communication between Python and CoppeliaSim?</li>
 </ul>
-<p></p>
-<ul>
-<li>Can you give an example of a project or task that you could complete using zmqRemoteAPI in CoppeliaSim?</li>
-</ul>
-</div><h1>ssh</h1>
+<p>5.Can you give an example of a project or task that you could complete using zmqRemoteAPI in CoppeliaSim?</p>
+<p>例如我們使用zmqRemoteAPI與組員協同控制w9專案，先匯入場景，使用ipconfig獲取場景ip，將CoppeliaSim內的程式ip進行更改，接著啟動程式，完成操控。</p>
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/FkCnjyqxy0I" title="YouTube video player" width="560"></iframe></div><h1>ssh</h1>
 <p><span class="TextRun SCXO49545015 BCX8" data-contrast="auto" lang="ZH-TW" xml:lang="ZH-TW"><span class="NormalTextRun SCXO49545015 BCX8">(登入 stud2.cycu.org)利用 @nfu 電子郵箱收到的帳號與密碼, 登入 stud2.cycu.org:  在命令列視窗, 以 <span style="background-color: #ff0000;">ssh </span></span></span><span class="TextRun SCXO49545015 BCX8" data-contrast="auto" lang="ZH-TW" xml:lang="ZH-TW"><span class="NormalTextRun SCXO49545015 BCX8"><span style="background-color: #ff0000;">cd學號@stud2.cycu.org</span> , 輸入對應密碼後, 可以登入系統</span></span><span class="EOP SCXO49545015 BCX8"> </span></p>
 <p><span data-contrast="auto"><span>與在近端(Windows)利用  SSH 建立 public/private keys 流程相同, 必須在 Linux (Ubuntu) 利用 <span style="background-color: #ff0000;">ssh-keygen</span> 建立 keys. 所產生的 id_rsa 為 private key, 而 id_rsa.pub 為 public key, 都位於 .ssh 目錄下.</span></span><span> </span></p>
 <p><span data-contrast="auto"><span>利用 sftp  進入 stud2.cycu.org 後, cd 到 .ssh, 以 get id_rsa.pub 將 public key 取至  Windows 後, 送到 Github -&gt; Settings -&gt; SSH and GPG 設定區, 透過 new key 登錄公鑰.</span></span><span> </span></p>
