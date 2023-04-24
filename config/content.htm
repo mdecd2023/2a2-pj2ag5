@@ -820,14 +820,18 @@ Plotly.newPlot('plot', data, layout)
 <ul>
 <li>What is zmqRemoteAPI, and how does it relate to CoppeliaSim?</li>
 </ul>
+<p>2.How do you establish a connection between a Python script and CoppeliaSim using zmqRemoteAPI?</p>
+<p>下載<a href="/downloads/zmqRemoteApi.7z">/downloads/zmqRemoteApi.7z</a>解壓縮</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># pip install pyzmq cbor keyboard
+ #這是安裝所需的Python庫，包括zmqRemoteAPI、pyzmq、cbor和keyboard。
+from zmqRemoteApi import RemoteAPIClient 
+#這是從zmqRemoteAPI庫中導入RemoteAPIClient類，用於與CoppeliaSim建立連接。
+import keyboard
+
+client = RemoteAPIClient('192.168.254.72', 23000) 
+#這是從zmqRemoteAPI庫中導入RemoteAPIClient類，用於與CoppeliaSim建立連接。</pre>
 <p></p>
-<ul>
-<li>How do you establish a connection between a Python script and CoppeliaSim using zmqRemoteAPI?</li>
-</ul>
-<p></p>
-<ul>
-<li>What are some common use cases for zmqRemoteAPI in CoppeliaSim?</li>
-</ul>
+<p>3.What are some common use cases for zmqRemoteAPI in CoppeliaSim?</p>
 <p>使用 zmqRemoteAPI，可以實現許多在 CoppeliaSim 中的常見用例，例如：</p>
 <ol>
 <li>
