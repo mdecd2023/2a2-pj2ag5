@@ -141,60 +141,8 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">w9 << <a href='w9.html'>Previous</a> <a href='ssh.html'>Next</a> >> ssh<br /><h1>w10</h1>
-<p><strong>1.What is zmqRemoteAPI, and how does it relate to CoppeliaSim?</strong></p>
-<p>chatgpt:<br/>zmqRemoteAPI 是指基於 ZeroMQ（一種高效的消息傳輸庫）的遠程API（應用程序編程接口），可用於與 CoppeliaSim 仿真軟體進行通訊。<br/>CoppeliaSim 是一個強大的通用機器人仿真軟體，允許用戶設計，模擬和驗證各種機器人系統。</p>
-<p>zmqRemoteAPI 允許用戶通過編程語言（如Python、C ++、Java等）與CoppeliaSim進行通訊，從而可以遠程控制和監視仿真場景。<br/>例如，用戶可以通過zmqRemoteAPI控制機器人在仿真環境中移動，並獲取傳感器數據或仿真結果。這使得用戶可以進行自動化測試，優化控制算法等。</p>
-<p>總之，zmqRemoteAPI提供了一個強大的工具，使得用戶可以通過編程語言與CoppeliaSim進行通訊，從而實現更強大的仿真控制和自動化。</p>
-<p>bing:<br/>zmqRemoteAPI 是 CoppeliaSim 的一種遠程 API，它允許外部應用程序或遠程硬件（例如真實機器人、遠程計算機等）從外部控制仿真（或仿真器本身）1。<br/>zmqRemoteAPI 可以通過多種方式與 CoppeliaSim 進行連接，其中之一就是 ZeroMQ 遠程 API。ZeroMQ 遠程 API 允許從外部應用程序或遠程硬件（例如真實機器人、遠程計算機等）控制仿真（或仿真器本身）1。<br/>ZeroMQ 遠程 API 提供了所有 API 函數，這些函數也可以通過 CoppeliaSim 腳本使用：這包括所有常規 API 函數（即 sim.* -type 函數），但也包括所有 API 函數提供的。</p>
-<p><strong></strong></p>
-<p><strong></strong></p>
-<p><strong>_________________________________________________________________</strong></p>
-<div>
-<p><strong></strong></p>
-<p><strong>2.How do you establish a connection between a Python script and CoppeliaSim using zmqRemoteAPI?</strong></p>
-<p>下載<a href="./../downloads/zmqRemoteApi.7z">/downloads/zmqRemoteApi.7z</a>解壓縮</p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># pip install pyzmq cbor keyboard
- #這是安裝所需的Python庫，包括zmqRemoteAPI、pyzmq、cbor和keyboard。
-from zmqRemoteApi import RemoteAPIClient 
-#這是從zmqRemoteAPI庫中導入RemoteAPIClient類，用於與CoppeliaSim建立連接。
-import keyboard
-
-client = RemoteAPIClient('192.168.254.72', 23000) 
-#這是從zmqRemoteAPI庫中導入RemoteAPIClient類，用於與CoppeliaSim建立連接。</pre>
-<p><strong></strong></p>
-<p><strong>_________________________________________________________________</strong></p>
-<p><strong></strong></p>
-<p><strong>3.What are some common use cases for zmqRemoteAPI in CoppeliaSim?</strong></p>
-<p>使用 zmqRemoteAPI，可以實現許多在 CoppeliaSim 中的常見用例，例如：</p>
-<ol>
-<li>
-<p>遠程控制和監視仿真：通過 zmqRemoteAPI，用戶可以從自己的應用程序中發送命令和數據到 CoppeliaSim，並接收來自 CoppeliaSim 的反饋信息，從而遠程控制和監視仿真過程。這對於進行遠程仿真、調試和測試非常有用。</p>
-</li>
-<li>
-<p>與外部硬件設備集成：使用 zmqRemoteAPI，用戶可以將 CoppeliaSim 與外部硬件設備集成，例如傳感器、執行器等。這可以模擬現實世界的情況，並使用戶能夠測試和驗證他們的控制算法和系統設計。</p>
-</li>
-<li>
-<p>自定義應用程序開發：zmqRemoteAPI 提供了一種靈活和強大的方法來開發自定義應用程序，這些應用程序可以與 CoppeliaSim 集成並使用其仿真能力。例如，可以開發用於自主導航、物流和智能製造的應用程序。</p>
-</li>
-<li>
-<p>與其他軟件系統集成：zmqRemoteAPI 還可以用於將 CoppeliaSim 與其他軟件系統集成，例如 ROS（機器人操作系統）、MATLAB 和 Simulink 等。這可以擴展 CoppeliaSim 的功能，使其與其他系統協同工作，從而實現更複雜的仿真場景和控制算法。</p>
-</li>
-</ol>
-<strong></strong></div>
-<div><strong></strong></div>
-<div><strong>_________________________________________________________________</strong></div>
-<div><strong></strong></div>
-<div><strong>4.What are the advantages and disadvantages of using zmqRemoteAPI compared to other methods of communication between Python and CoppeliaSim?</strong></div>
-<div><strong></strong></div>
-<div><strong></strong>使用 zmqRemoteAPI 與其他 Python 與 CoppeliaSim 之間的通訊方式相比，其優點如下：<br/><br/> 快速：zmqRemoteAPI 通訊速度快，因為它是基於 ZeroMQ 高效的通訊協議建立的。ZeroMQ 具有低延遲、低傳輸成本、高可靠性和高效能等優點，因此可以實現高效的通訊。<br/> 穩定：zmqRemoteAPI 是 CoppeliaSim 官方推薦的 Python 通訊方式之一，因此具有較高的穩定性和可靠性。<br/> 易於使用：zmqRemoteAPI 提供了簡單易用的 API，使用者可以方便地實現 Python 與 CoppeliaSim 之間的通訊</div>
-<div>
-<p><strong>_________________________________________________________________</strong></p>
-<p><strong></strong></p>
-<p><strong>5.Can you give an example of a project or task that you could complete using zmqRemoteAPI in CoppeliaSim?</strong></p>
-<p>例如我們使用zmqRemoteAPI與組員協同控制<a href="https://mdecd2023.github.io/2a2-pj2ag5/content/w9.html">w9</a>專案，先匯入場景，使用ipconfig獲取場景ip，將CoppeliaSim內的程式ip進行更改，接著啟動程式，完成操控。</p>
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/FkCnjyqxy0I" title="YouTube video player" width="560"></iframe></div>
-<p><strong>_________________________________________________________________</strong> <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/1qCXpwxw304" title="YouTube video player" width="560"></iframe></p><br />w9 << <a href='w9.html'>Previous</a> <a href='ssh.html'>Next</a> >> ssh</div>
+    <div id="tipue_search_content">key.py << <a href='key.py.html'>Previous</a> <a href='取消commit.html'>Next</a> >> 取消commit<br /><h1>相關指令</h1>
+<br />key.py << <a href='key.py.html'>Previous</a> <a href='取消commit.html'>Next</a> >> 取消commit</div>
         
     <!-- footer -->
       <div class="container">
