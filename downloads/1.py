@@ -10,8 +10,8 @@ sim.startSimulation()
 print('Simulation started')
 
 def setBubbleRobVelocity(leftWheelVelocity, rightWheelVelocity):
-    leftMotor = sim.getObject('/leftMotor')
-    rightMotor = sim.getObject('/rightMotor')
+    leftMotor = sim.getObject('/leftMotor1')
+    rightMotor = sim.getObject('/rightMotor1')
     sim.setJointTargetVelocity(leftMotor, leftWheelVelocity)
     sim.setJointTargetVelocity(rightMotor, rightWheelVelocity)
 
