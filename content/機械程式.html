@@ -145,8 +145,15 @@ img.add_border {
 <p><span style="background-color: #ffff00;"><strong>如何操控馬達?</strong></span></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">joint=sim.getObjectHandle('./joint')
 sim.setJointTargetPosition(joint,0.1)
-sim.setJointTargetPosition(joint,0)</pre>
-<p></p><br />機械式記分板 << <a href='機械式記分板.html'>Previous</a> <a href='ssh.html'>Next</a> >> ssh</div>
+--物體移動到絕對座標(0.1)
+sim.setJointTargetPosition(joint,0)
+--物體移動到絕對座標(0.0)</pre>
+<p><span style="background-color: #ffff00;">測試方塊0</span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">function sysCall_init()
+    joint=sim.getObjectHandle('./Cuboid[0]/joint')
+    sim.setJointTargetPosition(joint,-0.1)
+end</pre>
+<p><br/><br/></p><br />機械式記分板 << <a href='機械式記分板.html'>Previous</a> <a href='ssh.html'>Next</a> >> ssh</div>
         
     <!-- footer -->
       <div class="container">
