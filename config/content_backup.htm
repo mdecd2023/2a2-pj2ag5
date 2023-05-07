@@ -930,7 +930,8 @@ client = RemoteAPIClient('192.168.254.72', 23000)
 <p><br/><strong>sysCall_cleanup：V-REP仿真環境中的清理函數，用於<span style="background-color: #ffff00;">將分數板上的所有數字或字母的顏色恢復為color[2]</span>。</strong></p>
 <p><strong>2023/5/1協同影片</strong></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/ISCoEtRQ_MM" title="YouTube video player" width="560"></iframe></p>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<h2>程式</h2>
+<p> </p>
 <pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">function randomNumber()
     math.randomseed(os.time())
     return {tonumber(math.random(-2, 2) .. '.' .. math.random(0,9)),tonumber(math.random(-1, 1) .. '.' .. math.random(0,4)),1.0}
@@ -1105,17 +1106,23 @@ end
 
 </pre>
 <p><strong><span> </span></strong></p>
-<p>=======</p>
+<p> </p>
 <p><strong><span></span></strong></p>
-<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; ee0252c92f2d45fcd5a14e80675fa50063a0593d</p>
 <p><strong><span>__________________________________________________________________________</span></strong></p>
+<h2>機械式記分板</h2>
 <p><em><strong>2023/5/7</strong></em></p>
 <p><strong>第三版記分板:</strong></p>
 <p><strong>因前面對老師的要求理解錯誤，我們做成隨得分改變顏色的記分板設計，因此做了這版來滿足老師所要求的機械式設計。</strong></p>
 <p><strong><img alt="" height="315" src="/images/記分板1.png" width="560"/></strong></p>
 <p><strong><span><img alt="" height="315" src="/images/記分板2.png" width="560"/></span></strong></p>
 <p><strong><span>上圖紅色圓形部分為固定銷，白色圓形部分是可向前推動的銷，可實現將桿件向前推送達成數字顯示的效果。</span></strong></p>
-<p><strong><span><a href="/downloads/記分板(機械式.stl">記分板(機械式.stl)</a></span></strong></p><h1>ssh</h1>
+<p><strong><span><a href="/downloads/記分板(機械式.stl">記分板(機械式.stl)</a></span></strong></p>
+<h2>機械程式</h2>
+<p><span style="background-color: #ffff00;"><strong>如何操控馬達?</strong></span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">joint=sim.getObjectHandle('./joint')
+sim.setJointTargetPosition(joint,0.1)
+sim.setJointTargetPosition(joint,0)</pre>
+<p></p><h1>ssh</h1>
 <p><span class="TextRun SCXO49545015 BCX8" data-contrast="auto" lang="ZH-TW" xml:lang="ZH-TW"><span class="NormalTextRun SCXO49545015 BCX8">(登入 stud2.cycu.org)利用 @nfu 電子郵箱收到的帳號與密碼, 登入 stud2.cycu.org:  在命令列視窗, 以 <span style="background-color: #ff0000;">ssh </span></span></span><span class="TextRun SCXO49545015 BCX8" data-contrast="auto" lang="ZH-TW" xml:lang="ZH-TW"><span class="NormalTextRun SCXO49545015 BCX8"><span style="background-color: #ff0000;">cd學號@stud2.cycu.org</span> , 輸入對應密碼後, 可以登入系統</span></span><span class="EOP SCXO49545015 BCX8"> </span></p>
 <p><span data-contrast="auto"><span>與在近端(Windows)利用  SSH 建立 public/private keys 流程相同, 必須在 Linux (Ubuntu) 利用 <span style="background-color: #ff0000;">ssh-keygen</span> 建立 keys. 所產生的 id_rsa 為 private key, 而 id_rsa.pub 為 public key, 都位於 .ssh 目錄下.</span></span><span> </span></p>
 <p><span data-contrast="auto"><span>利用 sftp  進入 stud2.cycu.org 後, cd 到 .ssh, 以 get id_rsa.pub 將 public key 取至  Windows 後, 送到 Github -&gt; Settings -&gt; SSH and GPG 設定區, 透過 new key 登錄公鑰.</span></span><span> </span></p>
