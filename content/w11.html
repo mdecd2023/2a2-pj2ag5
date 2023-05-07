@@ -273,7 +273,104 @@ end
 
 --如果傳入的 number 參數的長度小於2，則會在數字前面添加一個0，這樣就可以確保數字的表示總是兩位數。
 --然後，這個函數會提取這個兩位數字串的每一位數字，分別存儲在一個名為 tensDigit 的變數和一個名為 onesDigit 的變數中。最後，這個函數會返回一個包含這兩個數字的表。
+function sysCall_init()
+    sensor1 = sim.getObject('./door1')
+    sensor2 = sim.getObject('./door2')
+    bubbleRobBase = 16
+    ball = 30
+    initialBubbleRobPosition = sim.getObjectPosition(bubbleRobBase, -1)
+    initialBubbleRobOrientation = sim.getObjectOrientation(bubbleRobBase, -1)
+    initia = sim.getObjectPosition(23, -1)
+    initial = sim.getObjectOrientation(23, -1)
+    initialballPosition = sim.getObjectPosition(ball, -1)
+    initialballOrientation = sim.getObjectOrientation(ball, -1)
+    -- do some initialization here
+    count = 18000  -- ??30????????????
+    score1 = 0  -- ??????
+    score2 = 0
 
+    xml = [[
+        &lt;ui closeable="false" resizeable="false" activate="false"&gt;
+            &lt;label text="30:00" style="* {background-color: #F00; color: #FFF; font-size: 32px; font-weight: bold; padding: 4px; border-radius: 4px;}" id="10"/&gt;
+            &lt;label text="0" style="* {background-color: #071E4B; color: #FFF ; font-size: 32px; font-weight: bold; padding: 4px; border-radius: 4px;}" id="20"/&gt;
+            &lt;label text="0" style="* {background-color: #071E4B; color: #FFF ; font-size: 32px; font-weight: bold; padding: 4px; border-radius: 4px;}" id="30"/&gt;
+        &lt;/ui&gt;
+    ]]
+    ui = simUI.create(xml)
+    simUI.setPosition(ui, 0,0, true)
+    for i = 1, 7 do
+        for x = 1, 4 do
+            ii = tostring(x) .. serialNumber[i]
+            local handle = sim.getObjectHandle("./scoreboard/".. ii )
+            handles[x][i] = handle
+        end
+    end
+end
+--透過sim.getObject()取得門的物件句柄，並存入sensor1和sensor2變數中。
+指定bubbleRobBase和ball變數分別為16和30，代表這些物件在模擬場景中的物件句柄。
+透過sim.getObjectPosition()和sim.getObjectOrientation()取得模擬場景中物件的位置和方向資訊，
+分別存入initialBubbleRobPosition、initialBubbleRobOrientation、initialballPosition和initialballOrientation變數中。
+將23號物件的位置和方向資訊分別存入initia和initial變數中。
+將count、score1和score2分別初始化為18000、0和0。
+創建一個簡單的UI介面，包含三個標籤(label)元件，分別代表倒數計時、兩個隊伍的得分。
+將介面移動到視窗左上角，並將其設為不可關閉、不可縮放和不可激活。
+設定用於記分牌的物件的物件句柄並存儲在handles二維陣列中。透過一個雙重迴圈，
+將所有的記分牌物件句柄存儲到handles變數中。(handles 是一個二維陣列，
+用於儲存多個物體在仿真環境中的句柄（handle）。
+二維陣列意味著它包含多個一維陣列，每個一維陣列都儲存了某一個維度上的物體句柄。
+在這裡，handles 有四個一維陣列，分別儲存了四個不同的元件在七個不同位置的句柄。
+通過這個二維陣列，程式可以方便地訪問並修改這些物體的屬性。)
+function sysCall_actuation()
+    result1=sim.readProximitySensor(sim.getObject('./door1'))
+    result2=sim.readProximitySensor(sim.getObject('./door2'))
+    -- 0 or 1
+    if(result1&gt;0)then
+        regress()
+        score1 = score1 +1 
+        
+    end
+--此函數為一個回調函數，它會在仿真器每個時間步驟中被自動調用。在此函數中，首先透過sim.getObject('./door1')和sim.getObject('./door2')獲取到與感測器關聯的對象。
+然後通過sim.readProximitySensor函數檢測與感測器對應的物體是否被觸發，
+並將檢測結果存儲在result1和result2變量中。
+如果result1大於0，表示感測器檢測到物體，此時會調用regress()函數和加分操作，即分數score1加1。
+
+  if(result2&gt;0)then
+        regress()
+        score2 = score2 +1 
+
+    end
+--如果result2大於0，表示感測器檢測到物體，此時會調用regress()函數和加分操作，即分數score2加1。
+if count &gt; 0 then
+        count = count - 1
+        local minutes = math.floor(count / 60)
+        local seconds = count % 60
+        local timeStr = string.format("%d:%02d", minutes, seconds)
+        simUI.setLabelText(ui, 10, timeStr)
+        simUI.setLabelText(ui, 20, tostring(score1))
+        simUI.setLabelText(ui, 30, tostring(score2))
+        red = scoreboard(score1)
+        blue = scoreboard(score2)
+        Toclear()
+        for i = 1, 2 do
+            Number(i,red[i])
+            Number(i+2,blue[i])
+        end
+    else
+        sim.stopSimulation()
+    end
+
+end
+--此段程式碼為在仿真環境中，用來更新計分板和倒數計時器的功能。
+當遊戲倒數計時器仍有剩餘時間（count &gt; 0），會依照每個計數間隔（1秒）進行更新。
+更新內容包含：剩餘時間的計算、將計算後的時間顯示在UI的倒數計時器上、顯示當前紅藍雙方的得分，
+同樣也是透過UI的label顯示。
+接著，程式會進入計分板的顯示功能。這邊透過呼叫Toclear()，先清除所有計分板的數字。
+再透過迴圈讀取紅藍雙方的分數，分別呼叫Number()函數，在計分板上顯示對應的數字。
+若遊戲倒數計時器已歸零，則程式會執行sim.stopSimulation()，停止遊戲仿真。
+function sysCall_cleanup()
+    Toclear()
+end
+--此程式為清理函數，當仿真停止時，會呼叫此函數，其目的為將目前顯示在分數板上的數字全部清除，使得下一次的遊戲能夠從零開始顯示分數。在此函數中，會呼叫之前已定義的Toclear()函數，該函數會將所有的數字方塊改變為背景色，以達到清空的效果。
 
 
 
