@@ -895,36 +895,45 @@ client = RemoteAPIClient('192.168.254.72', 23000)
 <p><em><strong>程式組:</strong></em></p>
 <p><em><strong></strong></em></p>
 <p><strong>讓元件變色的方法:</strong></p>
-<p>-- 取得物體句柄:</p>
+<p>-- <strong>取得物體句柄:</strong></p>
 <p><br/><span style="background-color: #ffff00;">objectHandle = sim.getObjectHandle('ObjectName')</span></p>
 <p>像是給程式物件的編號。</p>
-<p>-- 取得原始顏色:</p>
+<p>-- <strong>取得原始顏色:</strong></p>
 <p><br/><span style="background-color: #ffff00;">originalColor = sim.getShapeColor(objectHandle, nil, sim.colorcomponent_ambient_diffuse)</span></p>
 <p></p>
-<p>-- 定義新的顏色:</p>
+<p>-- <strong>定義新的顏色:</strong></p>
 <p><br/><span style="background-color: #ffff00;">newColor = {1, 0, 0}</span></p>
 <p></p>
-<p>-- 設定新的顏色:</p>
+<p>-- <strong>設定新的顏色:</strong></p>
 <p><br/><span style="background-color: #ffff00;">sim.setShapeColor(objectHandle, nil, sim.colorcomponent_ambient_diffuse, newColor)</span></p>
 <p></p>
 <p><strong></strong></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/_1FxvbRV65E" title="YouTube video player" width="560"></iframe></p>
-<p><strong>程式組</strong></p>
-<p><strong>可以模擬從1~10</strong></p>
-<p><strong>影片還未推上來</strong></p>
-<p><strong>七段顯示器可以顯示數字</strong></p>
+<p><strong></strong></p>
+<p><strong>應用上面所做的所有工作我們製作出:</strong></p>
+<p><span style="background-color: #ffff00;"><strong>四個數字都能透過顏色改變顯示0-9的功能。</strong></span></p>
+<p><strong>影片還未推上來。</strong></p>
+<p><em><strong>七段顯示器顯示示意畫面:</strong></em></p>
 <p><strong><img alt="" height="324" src="/images/9487.jpg" width="582"/></strong></p>
-<p><strong><span>handles：二維陣列，用於儲存分數板上的每個數字或字母的句柄（handle），以便後續的編程控制。</span></strong></p>
-<p><strong><span>color：二維陣列，儲存兩種顏色值，用於改變分數板上的數字或字母的顏色。</span></strong></p>
-<p><strong><span>specialNumbers：二維陣列，儲存了每個數字或字母在分數板上的哪些線段需要亮起，以便在後續的編程控制中能夠選擇需要亮起的線段。</span></strong></p>
-<p><strong><span>serialNumber：一維陣列，儲存了分數板上的字母或數字標記。</span></strong></p>
-<p>程式碼中的函數定義如下：</p>
-<p>Number：用於將一個數字或字母顯示在分數板上，並且根據specialNumbers陣列中的數據將需要亮起的線段顯示為顏色color[1]。<br/>sysCall_init：V-REP仿真環境中的初始化函數，用於將分數板上每個數字或字母的句柄儲存到handles陣列中。<br/>sysCall_cleanup：V-REP仿真環境中的清理函數，用於將分數板上的所有數字或字母的顏色恢復為color[2]。</p>
+<p><em><strong></strong></em></p>
+<p><em><strong>程式碼中的函數定義如下：</strong></em></p>
+<p><strong><span>handles：二維陣列，<span style="background-color: #ffff00;">用於儲存分數板上的每個數字或字母的句柄（handle）</span>，以便後續的編程控制。</span></strong></p>
+<p><strong><span></span></strong></p>
+<p><strong><span>color：<span style="background-color: #ffff00;">二維陣列</span>，儲存兩種顏色值，用於<span style="background-color: #ffff00;">改變分數板上的數字</span>或字母的顏色。</span></strong></p>
+<p><strong><span></span></strong></p>
+<p><strong><span>specialNumbers：<span style="background-color: #ffff00;">二維陣列</span>，<span style="background-color: #ffff00;">儲存了每個數字或字母在分數板上的哪些線段需要亮起</span>，以便在後續的編程控制中能夠選擇需要亮起的線段。</span></strong></p>
+<p><strong><span></span></strong></p>
+<p><strong><span>serialNumber：一維陣列，<span style="background-color: #ffff00;">儲存了分數板上的字母或數字標記</span>。</span></strong></p>
+<p><strong><span></span></strong></p>
+<p><em><strong></strong></em><strong>Number：用於將一個數字或字母顯示在分數板上，並且根<span style="background-color: #ffff00;">據specialNumbers陣列中的數據將需要亮起的線段顯示為顏色color[1]</span>。</strong></p>
+<p><br/><strong>sysCall_init：V-REP仿真環境中的初始化函數，用於<span style="background-color: #ffff00;">將分數板上每個數字或字母的句柄儲存到handles陣列</span>中。</strong></p>
+<p><br/><strong>sysCall_cleanup：V-REP仿真環境中的清理函數，用於<span style="background-color: #ffff00;">將分數板上的所有數字或字母的顏色恢復為color[2]</span>。</strong></p>
 <p><strong>2023/5/1協同影片</strong></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/ISCoEtRQ_MM" title="YouTube video player" width="560"></iframe></p>
-<p><strong></strong></p>
-<p><strong><span>2023/5/7</span></strong></p>
-<p><strong>第三版記分板</strong></p>
+<p><strong><span></span></strong></p>
+<p><strong><span>__________________________________________________________________________</span></strong></p>
+<p><em><strong>2023/5/7</strong></em></p>
+<p><strong>第三版記分板:</strong></p>
 <p><strong>因前面對老師的要求理解錯誤，我們做成隨得分改變顏色的記分板設計，因此做了這版來滿足老師所要求的機械式設計。</strong></p>
 <p><strong><img alt="" height="315" src="/images/記分板1.png" width="560"/></strong></p>
 <p><strong><span><img alt="" height="315" src="/images/記分板2.png" width="560"/></span></strong></p>
