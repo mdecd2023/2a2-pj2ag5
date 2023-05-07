@@ -201,12 +201,12 @@ img.add_border {
 <p><br/><strong>sysCall_cleanup：V-REP仿真環境中的清理函數，用於<span style="background-color: #ffff00;">將分數板上的所有數字或字母的顏色恢復為color[2]</span>。</strong></p>
 <p><strong>2023/5/1協同影片</strong></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/ISCoEtRQ_MM" title="YouTube video player" width="560"></iframe></p>
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
 <pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">function randomNumber()
     math.randomseed(os.time())
     return {tonumber(math.random(-2, 2) .. '.' .. math.random(0,9)),tonumber(math.random(-1, 1) .. '.' .. math.random(0,4)),1.0}
 end
-這段程式碼定義了一個名為randomNumber的函數，當被呼叫時，它會產生一個由三個數字組成的列表（list），這三個數字是從指定範圍中隨機選擇而來的。
+--這段程式碼定義了一個名為randomNumber的函數，當被呼叫時，它會產生一個由三個數字組成的列表（list），這三個數字是從指定範圍中隨機選擇而來的。
 在此函數中，首先使用math.randomseed(os.time())函數設置一個隨機數種子，以保證每次呼叫randomNumber函數時，產生的隨機數是不同的。接下來，使用math.random(-2, 2)函數從-2到2之間選擇一個整數，並使用math.random(0,9)函數從0到9之間選擇一個整數，這兩個整數組合起來成為一個小數，表示為第一個數字。同樣地，使用math.random(-1, 1)函數從-1到1之間選擇一個整數，並使用math.random(0,4)函數從0到4之間選擇一個整數，這兩個整數組合起來成為另一個小數，表示為第二個數字。最後，固定設置第三個數字為1.0，並將這三個數字放入一個列表中，作為函數的返回值。
 
 
@@ -219,7 +219,7 @@ function regress()
     sim.setObjectPosition(23, -1, initia)
     sim.setObjectOrientation(23, -1, initial)
 end
-這段程式碼包含一個名為regress()的函數，用於將機器人和球體重置到遊戲開始時的位置。在函數內部，程式暫停模擬運行，並使用sim.setObjectPosition()和sim.setObjectOrientation()函數將機器人和球體移回初始位置。
+--這段程式碼包含一個名為regress()的函數，用於將機器人和球體重置到遊戲開始時的位置。在函數內部，程式暫停模擬運行，並使用sim.setObjectPosition()和sim.setObjectOrientation()函數將機器人和球體移回初始位置。
 
 function Toclear()
     for i = 1, 7 do
@@ -229,11 +229,11 @@ function Toclear()
         end
     end
 end
-Toclear的函數，它的作用是清除計分板，也就是把所有的計分板LED燈恢復到預設的顏色。
+--Toclear的函數，它的作用是清除計分板，也就是把所有的計分板LED燈恢復到預設的顏色。
 
-函數使用了巢狀的for迴圈，首先從1到7遍歷一遍行，然後再從1到4遍歷一遍列，這樣就可以遍歷所有的計分板LED燈。
+--函數使用了巢狀的for迴圈，首先從1到7遍歷一遍行，然後再從1到4遍歷一遍列，這樣就可以遍歷所有的計分板LED燈。
 
-在迴圈內部，函數通過handle變量獲取每個LED燈的控制句柄，然後使用sim.setShapeColor函數將其顏色設置為預設顏色（在color表中的索引為2的顏色）。這樣，所有的計分板LED燈都會被恢復到預設的顏色，從而達到清除計分板的目的。
+--在迴圈內部，函數通過handle變量獲取每個LED燈的控制句柄，然後使用sim.setShapeColor函數將其顏色設置為預設顏色（在color表中的索引為2的顏色）。這樣，所有的計分板LED燈都會被恢復到預設的顏色，從而達到清除計分板的目的。
 
 function Number(displayNumber,ser)
     for i = 1, 7 do
@@ -247,9 +247,9 @@ function Number(displayNumber,ser)
 end
 
 
-這段程式碼是一個顯示數字的函數，它有兩個參數，一個是要顯示的數字 displayNumber，另一個是顯示器的類型 ser。這個函數的作用是將 displayNumber 這個數字顯示在屏幕上，屏幕的類型由 ser 決定。
+--這段程式碼是一個顯示數字的函數，它有兩個參數，一個是要顯示的數字 displayNumber，另一個是顯示器的類型 ser。這個函數的作用是將 displayNumber 這個數字顯示在屏幕上，屏幕的類型由 ser 決定。
 
-程式碼使用了嵌套的迴圈，第一個迴圈從 1 到 7 遍歷了七個數碼的 LED 顯示燈，第二個迴圈從 1 到 specialNumbers[ser] 的長度遍歷了指定類型的顯示屏上的特殊數碼。對於每個數碼燈，它會檢查這個燈是否是指定類型的顯示屏上的特殊數碼。如果是，它就會將該燈的顏色設置為顯示數字的顏色。
+--程式碼使用了嵌套的迴圈，第一個迴圈從 1 到 7 遍歷了七個數碼的 LED 顯示燈，第二個迴圈從 1 到 specialNumbers[ser] 的長度遍歷了指定類型的顯示屏上的特殊數碼。對於每個數碼燈，它會檢查這個燈是否是指定類型的顯示屏上的特殊數碼。如果是，它就會將該燈的顏色設置為顯示數字的顏色。
 
 
 function scoreboard(number)
@@ -262,18 +262,18 @@ function scoreboard(number)
     return{tensDigit,onesDigit}
 end
 
-這段程式碼定義了一個名為 scoreboard 的函數，該函數接受一個整數 number 作為參數，並將其轉換為兩位數的字串表示。
+--這段程式碼定義了一個名為 scoreboard 的函數，該函數接受一個整數 number 作為參數，並將其轉換為兩位數的字串表示。
 
-如果傳入的 number 參數的長度小於2，則會在數字前面添加一個0，這樣就可以確保數字的表示總是兩位數。然後，這個函數會提取這個兩位數字串的每一位數字，分別存儲在一個名為 tensDigit 的變數和一個名為 onesDigit 的變數中。最後，這個函數會返回一個包含這兩個數字的表。
+--如果傳入的 number 參數的長度小於2，則會在數字前面添加一個0，這樣就可以確保數字的表示總是兩位數。然後，這個函數會提取這個兩位數字串的每一位數字，分別存儲在一個名為 tensDigit 的變數和一個名為 onesDigit 的變數中。最後，這個函數會返回一個包含這兩個數字的表。
 
 
 
 
 </pre>
 <p><strong><span> </span></strong></p>
-=======
+<p>=======</p>
 <p><strong><span></span></strong></p>
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; ee0252c92f2d45fcd5a14e80675fa50063a0593d
+<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; ee0252c92f2d45fcd5a14e80675fa50063a0593d</p>
 <p><strong><span>__________________________________________________________________________</span></strong></p>
 <p><em><strong>2023/5/7</strong></em></p>
 <p><strong>第三版記分板:</strong></p>
