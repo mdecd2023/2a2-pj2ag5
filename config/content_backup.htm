@@ -915,6 +915,7 @@ client = RemoteAPIClient('192.168.254.72', 23000)
 <p><strong>影片還未推上來。</strong></p>
 <p><em><strong>七段顯示器顯示示意畫面:</strong></em></p>
 <p><strong><img alt="" height="324" src="/images/9487.jpg" width="582"/></strong></p>
+<<<<<<< HEAD
 <p><em><strong></strong></em></p>
 <p><em><strong>程式碼中的函數定義如下：</strong></em></p>
 <p><strong><span>handles：二維陣列，<span style="background-color: #ffff00;">用於儲存分數板上的每個數字或字母的句柄（handle）</span>，以便後續的編程控制。</span></strong></p>
@@ -926,10 +927,19 @@ client = RemoteAPIClient('192.168.254.72', 23000)
 <p><strong><span>serialNumber：一維陣列，<span style="background-color: #ffff00;">儲存了分數板上的字母或數字標記</span>。</span></strong></p>
 <p><strong><span></span></strong></p>
 <p><em><strong></strong></em><strong>Number：用於將一個數字或字母顯示在分數板上，並且根<span style="background-color: #ffff00;">據specialNumbers陣列中的數據將需要亮起的線段顯示為顏色color[1]</span>。</strong></p>
+=======
+<p><strong><span>handles：二維陣列，<span style="background-color: #ffff00;">用於儲存分數板上的每個數字或字母的句柄（handle）</span>，以便後續的編程控制。</span></strong></p>
+<p><strong><span>color：<span style="background-color: #ffff00;">二維陣列</span>，儲存兩種顏色值，用於<span style="background-color: #ffff00;">改變分數板上的數字</span>或字母的顏色。</span></strong></p>
+<p><strong><span>specialNumbers：<span style="background-color: #ffff00;">二維陣列</span>，<span style="background-color: #ffff00;">儲存了每個數字或字母在分數板上的哪些線段需要亮起</span>，以便在後續的編程控制中能夠選擇需要亮起的線段。</span></strong></p>
+<p><strong><span>serialNumber：一維陣列，<span style="background-color: #ffff00;">儲存了分數板上的字母或數字標記</span>。</span></strong></p>
+<p><em><strong>程式碼中的函數定義如下：</strong></em></p>
+<p><strong>Number：用於將一個數字或字母顯示在分數板上，並且根<span style="background-color: #ffff00;">據specialNumbers陣列中的數據將需要亮起的線段顯示為顏色color[1]</span>。</strong></p>
+>>>>>>> ee0252c92f2d45fcd5a14e80675fa50063a0593d
 <p><br/><strong>sysCall_init：V-REP仿真環境中的初始化函數，用於<span style="background-color: #ffff00;">將分數板上每個數字或字母的句柄儲存到handles陣列</span>中。</strong></p>
 <p><br/><strong>sysCall_cleanup：V-REP仿真環境中的清理函數，用於<span style="background-color: #ffff00;">將分數板上的所有數字或字母的顏色恢復為color[2]</span>。</strong></p>
 <p><strong>2023/5/1協同影片</strong></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/ISCoEtRQ_MM" title="YouTube video player" width="560"></iframe></p>
+<<<<<<< HEAD
 <pre class="brush:lua;collapse:true;auto-links:false;gutter:false;toolbar:false" contenteditable="false">function randomNumber()
     math.randomseed(os.time())
     return {tonumber(math.random(-2, 2) .. '.' .. math.random(0,9)),tonumber(math.random(-1, 1) .. '.' .. math.random(0,4)),1.0}
@@ -999,6 +1009,9 @@ end
 
 </pre>
 <p><strong><span> </span></strong></p>
+=======
+<p><strong><span></span></strong></p>
+>>>>>>> ee0252c92f2d45fcd5a14e80675fa50063a0593d
 <p><strong><span>__________________________________________________________________________</span></strong></p>
 <p><em><strong>2023/5/7</strong></em></p>
 <p><strong>第三版記分板:</strong></p>
