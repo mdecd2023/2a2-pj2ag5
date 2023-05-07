@@ -880,36 +880,35 @@ client = RemoteAPIClient('192.168.254.72', 23000)
 <p><span style="color: #000000; background-color: #ffff00;"><strong>(加入&gt;原始物件&gt;長方體)</strong></span></p>
 <p><strong>初始第一版</strong>記分板<a href="/downloads/記分板ok.stl">記分板ok.stl</a></p>
 <p><a href="/downloads/測試1.ttt">測試用記分板.ttt</a></p>
-<p>2023/5/1</p>
-<p><strong>記分板理念</strong></p>
-<p><strong>使用七段顯示器在Onshape上搜尋我們需要的七段顯示器圖檔----&gt;</strong><strong>匯入File&gt;Import&gt;Mesh</strong></p>
-<p><strong>劃分選定的形狀Edit&gt;Gourping&gt;Divide selected shape</strong></p>
-<p><strong>程式組</strong></p>
-<p><strong>初始理念</strong></p>
-<p><strong>讓元件變色的方法</strong></p>
-<p>-- 取得物體句柄<br/>objectHandle = sim.getObjectHandle('ObjectName')</p>
-<p>像是給程式物件的編號</p>
-<p>-- 取得原始顏色<br/>originalColor = sim.getShapeColor(objectHandle, nil, sim.colorcomponent_ambient_diffuse)</p>
-<p></p>
-<p>-- 定義新的顏色<br/>newColor = {1, 0, 0}</p>
-<p></p>
-<p>-- 設定新的顏色<br/>sim.setShapeColor(objectHandle, nil, sim.colorcomponent_ambient_diffuse, newColor)</p>
-<p></p>
-<p><strong></strong></p>
-<p><strong></strong></p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/_1FxvbRV65E" title="YouTube video player" width="560"></iframe></p>
-<p><strong><span>2023/5/2</span></strong></p>
-<p><strong><span>第二版計分版</span></strong></p>
-<p><strong><span>由於第一版記分板無法在coppeliasim爆炸成個別零件，無法達成我們想改變計分板顏色來實現計分功能的計畫，因此畫了第二版，順利完成爆炸拆件。</span></strong></p>
+<p>__________________________________________________________________________</p>
+<p><em><strong>2023/5/1</strong></em></p>
+<p><em><strong>場景組:</strong></em></p>
+<p><strong>第二版記分板v1:</strong></p>
+<p><strong>使用Onshape繪製我們需要的七段顯示器圖檔，繪製完成後，</strong><strong>匯入<span style="background-color: #ffff00;">File&gt;Import&gt;Mesh</span></strong><br/><strong></strong></p>
+<p><strong>，匯入後進行爆炸拆件，<span style="background-color: #ffff00;">Edit&gt;Gourping&gt;Divide selected shape<span style="background-color: #ffffff;">，因為我們是使用變換物件顏色來顯示得分數字，所以物件導入後的拆件動作件特別重要。</span></span></strong></p>
+<p><strong><span style="background-color: #ffff00;"><span style="background-color: #ffffff;"></span></span></strong></p>
+<p><strong><span>第二版計分版v2:</span></strong></p>
+<p><strong><span><span style="background-color: #ffff00;">由於第二版記分板v1，無法在Coppeliasim爆炸成個別零件</span>，無法達成我們想改變計分板顏色來實現計分功能的計畫，<span style="background-color: #ffff00;">因此畫了第二版v2</span>，順利完成爆炸拆件。</span></strong></p>
 <p><strong><span><a href="/downloads/scoreboard.ttt">scoreboard.ttt</a></span></strong></p>
 <p><strong><span><img caption="false" height="298" src="/images/score.png" width="520"/></span></strong></p>
-<p><strong><span></span>2023/05/07</strong></p>
-<p><strong>第三版記分板</strong></p>
-<p><strong>因前面對老師的要求理解錯誤，我們做成隨得分改變顏色的記分板設計，因此做了這版來滿足老師所要求的機械式設計。</strong></p>
-<p><strong><img alt="" height="315" src="/images/記分板1.png" width="560"/></strong></p>
-<p><strong><span><img alt="" height="315" src="/images/記分板2.png" width="560"/></span></strong></p>
-<p><strong><span>上圖紅色圓形部分為固定銷，白色圓形部分是可向前推動的銷，可實現將桿件向前推送達成數字顯示的效果。</span></strong></p>
-<p><strong><span><a href="/downloads/記分板(機械式.stl">記分板(機械式.stl)</a></span></strong></p>
+<p></p>
+<p><em><strong>程式組:</strong></em></p>
+<p><em><strong></strong></em></p>
+<p><strong>讓元件變色的方法:</strong></p>
+<p>-- 取得物體句柄:</p>
+<p><br/><span style="background-color: #ffff00;">objectHandle = sim.getObjectHandle('ObjectName')</span></p>
+<p>像是給程式物件的編號。</p>
+<p>-- 取得原始顏色:</p>
+<p><br/><span style="background-color: #ffff00;">originalColor = sim.getShapeColor(objectHandle, nil, sim.colorcomponent_ambient_diffuse)</span></p>
+<p></p>
+<p>-- 定義新的顏色:</p>
+<p><br/><span style="background-color: #ffff00;">newColor = {1, 0, 0}</span></p>
+<p></p>
+<p>-- 設定新的顏色:</p>
+<p><br/><span style="background-color: #ffff00;">sim.setShapeColor(objectHandle, nil, sim.colorcomponent_ambient_diffuse, newColor)</span></p>
+<p></p>
+<p><strong></strong></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/_1FxvbRV65E" title="YouTube video player" width="560"></iframe></p>
 <p><strong>程式組</strong></p>
 <p><strong>可以模擬從1~10</strong></p>
 <p><strong>影片還未推上來</strong></p>
@@ -923,7 +922,14 @@ client = RemoteAPIClient('192.168.254.72', 23000)
 <p>Number：用於將一個數字或字母顯示在分數板上，並且根據specialNumbers陣列中的數據將需要亮起的線段顯示為顏色color[1]。<br/>sysCall_init：V-REP仿真環境中的初始化函數，用於將分數板上每個數字或字母的句柄儲存到handles陣列中。<br/>sysCall_cleanup：V-REP仿真環境中的清理函數，用於將分數板上的所有數字或字母的顏色恢復為color[2]。</p>
 <p><strong>2023/5/1協同影片</strong></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/ISCoEtRQ_MM" title="YouTube video player" width="560"></iframe></p>
-<p><strong></strong></p><h1>ssh</h1>
+<p><strong></strong></p>
+<p><strong><span>2023/5/7</span></strong></p>
+<p><strong>第三版記分板</strong></p>
+<p><strong>因前面對老師的要求理解錯誤，我們做成隨得分改變顏色的記分板設計，因此做了這版來滿足老師所要求的機械式設計。</strong></p>
+<p><strong><img alt="" height="315" src="/images/記分板1.png" width="560"/></strong></p>
+<p><strong><span><img alt="" height="315" src="/images/記分板2.png" width="560"/></span></strong></p>
+<p><strong><span>上圖紅色圓形部分為固定銷，白色圓形部分是可向前推動的銷，可實現將桿件向前推送達成數字顯示的效果。</span></strong></p>
+<p><strong><span><a href="/downloads/記分板(機械式.stl">記分板(機械式.stl)</a></span></strong></p><h1>ssh</h1>
 <p><span class="TextRun SCXO49545015 BCX8" data-contrast="auto" lang="ZH-TW" xml:lang="ZH-TW"><span class="NormalTextRun SCXO49545015 BCX8">(登入 stud2.cycu.org)利用 @nfu 電子郵箱收到的帳號與密碼, 登入 stud2.cycu.org:  在命令列視窗, 以 <span style="background-color: #ff0000;">ssh </span></span></span><span class="TextRun SCXO49545015 BCX8" data-contrast="auto" lang="ZH-TW" xml:lang="ZH-TW"><span class="NormalTextRun SCXO49545015 BCX8"><span style="background-color: #ff0000;">cd學號@stud2.cycu.org</span> , 輸入對應密碼後, 可以登入系統</span></span><span class="EOP SCXO49545015 BCX8"> </span></p>
 <p><span data-contrast="auto"><span>與在近端(Windows)利用  SSH 建立 public/private keys 流程相同, 必須在 Linux (Ubuntu) 利用 <span style="background-color: #ff0000;">ssh-keygen</span> 建立 keys. 所產生的 id_rsa 為 private key, 而 id_rsa.pub 為 public key, 都位於 .ssh 目錄下.</span></span><span> </span></p>
 <p><span data-contrast="auto"><span>利用 sftp  進入 stud2.cycu.org 後, cd 到 .ssh, 以 get id_rsa.pub 將 public key 取至  Windows 後, 送到 Github -&gt; Settings -&gt; SSH and GPG 設定區, 透過 new key 登錄公鑰.</span></span><span> </span></p>
