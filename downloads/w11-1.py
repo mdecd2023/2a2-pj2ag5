@@ -26,11 +26,11 @@ setBubbleRobVelocity(0.0, 0.0)
 while True:
     if keyboard.is_pressed('w'):
         setBubbleRobVelocity(1.0, 1.0)
-    elif keyboard.is_pressed('z'):
+    elif keyboard.is_pressed('s'):
         setBubbleRobVelocity(-1.0, -1.0)
     elif keyboard.is_pressed('a'):
         setBubbleRobVelocity(-1.0, 1.0)
-    elif keyboard.is_pressed('s'):
+    elif keyboard.is_pressed('d'):
         setBubbleRobVelocity(1.0, -1.0)
     elif keyboard.is_pressed('q'):
         # stop simulation

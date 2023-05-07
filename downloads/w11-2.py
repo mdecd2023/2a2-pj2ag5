@@ -10,8 +10,8 @@ sim.startSimulation()
 print('Simulation started')
 
 def setBubbleRobVelocity(leftWheelVelocity, rightWheelVelocity):
-    leftMotor = sim.getObject('/leftMotor1')
-    rightMotor = sim.getObject('/rightMotor1')
+    leftMotor = sim.getObject('/leftMotor')
+    rightMotor = sim.getObject('/rightMotor')
     sim.setJointTargetVelocity(leftMotor, leftWheelVelocity)
     sim.setJointTargetVelocity(rightMotor, rightWheelVelocity)
 
@@ -24,13 +24,13 @@ setBubbleRobVelocity(0.0, 0.0)
 # use keyborad to move BubbleRob
 
 while True:
-    if keyboard.is_pressed('w'):
+    if keyboard.is_pressed('8'):
         setBubbleRobVelocity(1.0, 1.0)
-    elif keyboard.is_pressed('z'):
+    elif keyboard.is_pressed('5'):
         setBubbleRobVelocity(-1.0, -1.0)
-    elif keyboard.is_pressed('a'):
+    elif keyboard.is_pressed('4'):
         setBubbleRobVelocity(-1.0, 1.0)
-    elif keyboard.is_pressed('s'):
+    elif keyboard.is_pressed('6'):
         setBubbleRobVelocity(1.0, -1.0)
     elif keyboard.is_pressed('q'):
         # stop simulation
