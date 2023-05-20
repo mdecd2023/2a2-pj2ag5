@@ -4,12 +4,13 @@
 <p><span>2ag5網站:<a href="https://mdecd2023.github.io/2a2-pj2ag5">https://mdecd2023.github.io/2a2-pj2ag5</a></span></p>
 <p>工作分配</p>
 <p>組長:41023125程式、無限多個程式</p>
-<p>組員:41023106七段低一版測試版、統整網頁</p>
+<p>組員:41023106七段第一版測試版、統整網頁</p>
 <p>       41023153七段顯示器第三版、繪製七段顯示器</p>
-<p>       41023113七段顯示器第四版、繪製場景建立</p>
+<p>       41023113七段顯示器第四版、繪製場景建立、latex報告製作</p>
 <div id="gtx-trans" style="position: absolute; left: -36px; top: 153.075px;">
 <div class="gtx-trans-icon"></div>
-</div><h1>Brython</h1>
+</div>
+<h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
 <h4>Examples:</h4>
 <p style="padding-left: 30px;"><a href="https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d">https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d</a></p>
@@ -934,7 +935,8 @@ client = RemoteAPIClient('192.168.254.72', 23000)
 <h2>協同影片</h2>
 <p><strong>2023/5/1</strong></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/ISCoEtRQ_MM" title="YouTube video player" width="560"></iframe></p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/jKVGvgcAxYo" title="YouTube video player" width="560"></iframe></p><h2>程式</h2>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/jKVGvgcAxYo" title="YouTube video player" width="560"></iframe></p>
+<h2>程式</h2>
 <p> </p>
 <pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">function randomNumber()
     math.randomseed(os.time())
@@ -1130,7 +1132,8 @@ end
 <p><strong><span>馬達</span></strong></p>
 <p><span style="background-color: #ffff00;"><strong>Add&gt;Joint&gt;Prismatic</strong></span></p>
 <p><span style="background-color: #ffff00;"><strong></strong></span></p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/D8y-4Jfo5Y0" title="YouTube video player" width="560"></iframe></p><h2>機械程式</h2>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/D8y-4Jfo5Y0" title="YouTube video player" width="560"></iframe></p>
+<h2>機械程式</h2>
 <p><span style="background-color: #ffff00;"><strong>如何操控馬達?</strong></span></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">joint=sim.getObjectHandle('./joint')
 sim.setJointTargetPosition(joint,0.1)
@@ -1283,7 +1286,8 @@ end
 function sysCall_cleanup()
     Toclear()
 end</pre>
-<p></p><h1>ssh</h1>
+<p></p>
+<h1>ssh</h1>
 <p><span class="TextRun SCXO49545015 BCX8" data-contrast="auto" lang="ZH-TW" xml:lang="ZH-TW"><span class="NormalTextRun SCXO49545015 BCX8">(登入 stud2.cycu.org)利用 @nfu 電子郵箱收到的帳號與密碼, 登入 stud2.cycu.org:  在命令列視窗, 以 <span style="background-color: #ff0000;">ssh </span></span></span><span class="TextRun SCXO49545015 BCX8" data-contrast="auto" lang="ZH-TW" xml:lang="ZH-TW"><span class="NormalTextRun SCXO49545015 BCX8"><span style="background-color: #ff0000;">cd學號@stud2.cycu.org</span> , 輸入對應密碼後, 可以登入系統</span></span><span class="EOP SCXO49545015 BCX8"> </span></p>
 <p><span data-contrast="auto"><span>與在近端(Windows)利用  SSH 建立 public/private keys 流程相同, 必須在 Linux (Ubuntu) 利用 <span style="background-color: #ff0000;">ssh-keygen</span> 建立 keys. 所產生的 id_rsa 為 private key, 而 id_rsa.pub 為 public key, 都位於 .ssh 目錄下.</span></span><span> </span></p>
 <p><span data-contrast="auto"><span>利用 sftp  進入 stud2.cycu.org 後, cd 到 .ssh, 以 get id_rsa.pub 將 public key 取至  Windows 後, 送到 Github -&gt; Settings -&gt; SSH and GPG 設定區, 透過 new key 登錄公鑰.</span></span><span> </span></p>
