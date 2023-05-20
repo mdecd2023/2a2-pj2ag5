@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 23.1 Portable) (preloaded format=xelatex 2023.4.15)  8 MAY 2023 10:06
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 23.1 Portable) (preloaded format=xelatex 2023.5.20)  20 MAY 2023 19:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -429,7 +429,7 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Cskip=\skip73
 )
 (y:\miktex-portable\texmfs\install\tex/latex/eso-pic\eso-pic.sty
-Package: eso-pic 2023/03/23 v3.0b eso-pic (RN)
+Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
 \ESO@tempdima=\dimen263
 \ESO@tempdimb=\dimen264
 
@@ -696,7 +696,7 @@ Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
 LaTeX Warning: Unused global option(s):
     [14pt].
 
-No file cd_report.aux.
+(cd_report.aux)
 \openout1 = `cd_report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
@@ -710,7 +710,7 @@ LaTeX Font Info:    ... okay on input line 60.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 6
 0.
-(y:\miktex-portable\texmfs\install\tex/latex/base\ts1cmr.fd
+ (y:\miktex-portable\texmfs\install\tex/latex/base\ts1cmr.fd
 File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 60.
@@ -817,11 +817,9 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 
 \c@lstlisting=\count335
 Package hyperref Info: Link coloring OFF on input line 60.
+(cd_report.out) (cd_report.out)
 \@outlinefile=\write3
 \openout3 = `cd_report.out'.
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
 
 
 Underfull \hbox (badness 10000) detected at line 66
@@ -869,55 +867,63 @@ Overfull \hbox (145.89752pt too wide) detected at line 98
 
 [1
 
-] (abstract.tex [1
+] (abstract.tex) [1
 
-]) [2]
-No file cd_report.toc.
+] [2] (cd_report.toc)
 \tf@toc=\write4
 \openout4 = `cd_report.toc'.
 
-[3
+ [3
 
-]
-No file cd_report.lof.
+] (cd_report.lof)
 \tf@lof=\write5
 \openout5 = `cd_report.lof'.
 
-[4
+
+(1_introduction.tex [4
 
 ]
-No file cd_report.lot.
-\tf@lot=\write6
-\openout6 = `cd_report.lot'.
+Chapter 1.
+) (2_machine_learning.tex [1
 
-[5
+]
+Chapter 2.
+[2
 
-] (10_appendix.tex
-File: ./../images//編譯流程.png Graphic file (type bmp)
-<./../images//編譯流程.png>
- [6]) [7] (cd_report.aux)
+]) (3_training_env.tex
+Chapter 3.
+) (4_simulation.tex [3
+
+]
+Chapter 4.
+[4
+
+]) (5_server.tex
+Chapter 5.
+) (6_training_result.tex [5
+
+]
+Chapter 6.
+) (7_suggestion.tex [6
+
+]
+Chapter 7.
+) [7
+
+] (cd_report.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `cd_report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `cd_report.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  59AFD9F5963B957747E109BDFCBA7EA2;226.
+Package rerunfilecheck Info: File `cd_report.out' has not changed.
+(rerunfilecheck)             Checksum: 83549F32BFF7B0B00583B1D3B92255C6;1759.
  ) 
 Here is how much of TeX's memory you used:
- 19188 strings out of 411476
- 372293 string characters out of 5820613
- 1865001 words of memory out of 5000000
- 39129 multiletter control sequences out of 15000+600000
- 518226 words of font info for 99 fonts, out of 8000000 for 9000
+ 19129 strings out of 411476
+ 369395 string characters out of 5820613
+ 1855001 words of memory out of 5000000
+ 39068 multiletter control sequences out of 15000+600000
+ 517032 words of font info for 90 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 72i,17n,84p,620b,459s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,6n,84p,594b,458s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on cd_report.pdf (8 pages).
+Output written on cd_report.pdf (12 pages).
