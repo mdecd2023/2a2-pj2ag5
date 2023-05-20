@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 23.1 Portable) (preloaded format=xelatex 2023.5.20)  20 MAY 2023 19:16
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 23.1 Portable) (preloaded format=xelatex 2023.5.20)  20 MAY 2023 22:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -869,18 +869,37 @@ Overfull \hbox (145.89752pt too wide) detected at line 98
 
 ] (abstract.tex) [1
 
-] [2] (cd_report.toc)
+] [2] (cd_report.toc
+Overfull \hbox (1.77997pt too wide) detected at line 16
+ \TU/TimesNewRoman(0)/m/n/17.28 10
+ []
+
+
+Overfull \hbox (1.77997pt too wide) detected at line 17
+ \TU/TimesNewRoman(0)/m/n/17.28 10
+ []
+
+
+Overfull \hbox (1.13872pt too wide) detected at line 18
+ \TU/TimesNewRoman(0)/m/n/17.28 11
+ []
+
+)
 \tf@toc=\write4
 \openout4 = `cd_report.toc'.
 
  [3
 
-] (cd_report.lof)
+] (cd_report.lof
+Overfull \hbox (0.363pt too wide) detected at line 17
+ []\TU/lmr/m/n/17.28 11
+ []
+
+)
 \tf@lof=\write5
 \openout5 = `cd_report.lof'.
 
-
-(1_introduction.tex [4
+ (1_introduction.tex [4
 
 ]
 Chapter 1.
@@ -888,42 +907,85 @@ Chapter 1.
 
 ]
 Chapter 2.
+File: ./../images//匯入球場1.png Graphic file (type bmp)
+<./../images//匯入球場1.png>
+File: ./../images//變色.png Graphic file (type bmp)
+<./../images//變色.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--18
+
+ []
+
 [2
 
-]) (3_training_env.tex
+]
+File: ./../images//測試.png Graphic file (type bmp)
+<./../images//測試.png>
+File: ./../images//score.png Graphic file (type bmp)
+<./../images//score.png>
+ [3]
+File: ./../images//9487.jpg Graphic file (type bmp)
+<./../images//9487.jpg>
+File: ./../images//記分板1.png Graphic file (type bmp)
+<./../images//記分板1.png>
+File: ./../images//記分板2.png Graphic file (type bmp)
+<./../images//記分板2.png>
+File: ./../images//機械計分版圖片.png Graphic file (type bmp)
+<./../images//機械計分版圖片.png>
+File: ./../images//5b.png Graphic file (type bmp)
+<./../images//5b.png>
+) (3_training_env.tex
+Underfull \hbox (badness 10000) in paragraph at lines 36--1
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--1
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--1
+
+ []
+
+[4] [5]
 Chapter 3.
-) (4_simulation.tex [3
+) (4_simulation.tex [6
 
 ]
 Chapter 4.
-[4
+[7
 
 ]) (5_server.tex
 Chapter 5.
-) (6_training_result.tex [5
+) (6_training_result.tex [8
 
 ]
 Chapter 6.
-) (7_suggestion.tex [6
+) (7_suggestion.tex [9
 
 ]
 Chapter 7.
-) [7
+) [10
 
 ] (cd_report.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `cd_report.out' has not changed.
-(rerunfilecheck)             Checksum: 83549F32BFF7B0B00583B1D3B92255C6;1759.
+(rerunfilecheck)             Checksum: 3EDD91878D5027F9A81F518A4A86F8DA;1676.
  ) 
 Here is how much of TeX's memory you used:
- 19129 strings out of 411476
- 369395 string characters out of 5820613
+ 19314 strings out of 411476
+ 372592 string characters out of 5820613
  1855001 words of memory out of 5000000
- 39068 multiletter control sequences out of 15000+600000
+ 39243 multiletter control sequences out of 15000+600000
  517032 words of font info for 90 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  72i,6n,84p,594b,458s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on cd_report.pdf (12 pages).
+Output written on cd_report.pdf (15 pages).
