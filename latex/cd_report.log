@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 23.1 Portable) (preloaded format=xelatex 2023.5.20)  20 MAY 2023 22:28
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 23.1 Portable) (preloaded format=xelatex 2023.5.20)  21 MAY 2023 11:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -870,18 +870,38 @@ Overfull \hbox (145.89752pt too wide) detected at line 98
 ] (abstract.tex) [1
 
 ] [2] (cd_report.toc
+Overfull \hbox (1.13872pt too wide) detected at line 11
+ \TU/TimesNewRoman(0)/m/n/17.28 11
+ []
+
+
+Overfull \hbox (1.77997pt too wide) detected at line 12
+ \TU/TimesNewRoman(0)/m/n/17.28 12
+ []
+
+
+Overfull \hbox (1.77997pt too wide) detected at line 13
+ \TU/TimesNewRoman(0)/m/n/17.28 12
+ []
+
+
+Overfull \hbox (1.77997pt too wide) detected at line 14
+ \TU/TimesNewRoman(0)/m/n/17.28 12
+ []
+
+
+Overfull \hbox (1.77997pt too wide) detected at line 15
+ \TU/TimesNewRoman(0)/m/n/17.28 12
+ []
+
+
 Overfull \hbox (1.77997pt too wide) detected at line 16
- \TU/TimesNewRoman(0)/m/n/17.28 10
+ \TU/TimesNewRoman(0)/m/n/17.28 12
  []
 
 
 Overfull \hbox (1.77997pt too wide) detected at line 17
- \TU/TimesNewRoman(0)/m/n/17.28 10
- []
-
-
-Overfull \hbox (1.13872pt too wide) detected at line 18
- \TU/TimesNewRoman(0)/m/n/17.28 11
+ \TU/TimesNewRoman(0)/m/n/17.28 13
  []
 
 )
@@ -891,17 +911,37 @@ Overfull \hbox (1.13872pt too wide) detected at line 18
  [3
 
 ] (cd_report.lof
-Overfull \hbox (0.363pt too wide) detected at line 17
+Overfull \hbox (0.363pt too wide) detected at line 21
+ []\TU/lmr/m/n/17.28 10
+ []
+
+
+Overfull \hbox (0.363pt too wide) detected at line 22
+ []\TU/lmr/m/n/17.28 10
+ []
+
+
+Overfull \hbox (0.363pt too wide) detected at line 23
  []\TU/lmr/m/n/17.28 11
+ []
+
+[4
+
+]
+Overfull \hbox (0.363pt too wide) detected at line 24
+ []\TU/lmr/m/n/17.28 11
+ []
+
+
+Overfull \hbox (0.363pt too wide) detected at line 27
+ []\TU/lmr/m/n/17.28 13
  []
 
 )
 \tf@lof=\write5
 \openout5 = `cd_report.lof'.
 
- (1_introduction.tex [4
-
-]
+ (1_introduction.tex [5]
 Chapter 1.
 ) (2_machine_learning.tex [1
 
@@ -951,41 +991,75 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--1
 
 [4] [5]
 Chapter 3.
-) (4_simulation.tex [6
+File: ./../images//1.png Graphic file (type bmp)
+<./../images//1.png>
+File: ./../images//2.png Graphic file (type bmp)
+<./../images//2.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--19
+
+ []
+
+[6
 
 ]
+File: ./../images//3.png Graphic file (type bmp)
+<./../images//3.png>
+File: ./../images//4.png Graphic file (type bmp)
+<./../images//4.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--35
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--35
+
+ []
+
+[7]
+File: ./../images//5.png Graphic file (type bmp)
+<./../images//5.png>
+File: ./../images//6.png Graphic file (type bmp)
+<./../images//6.png>
+File: ./../images//7.png Graphic file (type bmp)
+<./../images//7.png>
+File: ./../images//8.png Graphic file (type bmp)
+<./../images//8.png>
+ [8] [9]
+File: ./../images//9.png Graphic file (type bmp)
+<./../images//9.png>
+File: ./../images//10.png Graphic file (type bmp)
+<./../images//10.png>
+ [10]
+File: ./../images//1-1.png Graphic file (type bmp)
+<./../images//1-1.png>
+File: ./../images//1-2.png Graphic file (type bmp)
+<./../images//1-2.png>
+) (4_simulation.tex [11]
 Chapter 4.
-[7
+[12
 
 ]) (5_server.tex
 Chapter 5.
-) (6_training_result.tex [8
-
-]
-Chapter 6.
-) (7_suggestion.tex [9
-
-]
-Chapter 7.
-) [10
+File: ./../images//finish.png Graphic file (type bmp)
+<./../images//finish.png>
+) [13
 
 ] (cd_report.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `cd_report.out' has not changed.
-(rerunfilecheck)             Checksum: 3EDD91878D5027F9A81F518A4A86F8DA;1676.
+(rerunfilecheck)             Checksum: 80A7C9CD3E5BCF45787D196FF0515BAE;1528.
  ) 
 Here is how much of TeX's memory you used:
- 19314 strings out of 411476
- 372592 string characters out of 5820613
- 1855001 words of memory out of 5000000
- 39243 multiletter control sequences out of 15000+600000
+ 19548 strings out of 411476
+ 376295 string characters out of 5820613
+ 1861001 words of memory out of 5000000
+ 39474 multiletter control sequences out of 15000+600000
  517032 words of font info for 90 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 72i,6n,84p,594b,458s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,6n,84p,753b,498s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on cd_report.pdf (15 pages).
+Output written on cd_report.pdf (19 pages).
